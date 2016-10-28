@@ -24,6 +24,20 @@ class ViewController: UIViewController {
         currentlyTyping = true;
     }
     
+    var memory: CalculatorModel.PropertyList?
+    
+    @IBAction func restoreMemory(sender: AnyObject) {
+        if memory != nil {
+            calculator.memory = memory!
+            displayValue = calculator.result
+        }
+    }
+    
+    
+    @IBAction func saveMemory(sender: AnyObject) {
+        
+        memory = calculator.memory
+    }
     private var displayValue : Double {
         get {
             return Double(display.text!)!

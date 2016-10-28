@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Calculator
+//  DrawFace
 //
 //  Created by Narayan Balasubramanian on 10/20/16.
 //  Copyright © 2016 SJSU. All rights reserved.
@@ -12,8 +12,6 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-    
-    
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
