@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		8B6B1B321DBFCC4A00501F54 /* FaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6B1B311DBFCC4A00501F54 /* FaceView.swift */; };
+		8B6B4FCF1DD23ABC0013CCE9 /* FaceExpression.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6B4FCE1DD23ABC0013CCE9 /* FaceExpression.swift */; };
 		8B806E021DB94B7600F0E66D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B806E011DB94B7600F0E66D /* AppDelegate.swift */; };
 		8B806E041DB94B7600F0E66D /* FaceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B806E031DB94B7600F0E66D /* FaceViewController.swift */; };
 		8B806E071DB94B7600F0E66D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B806E051DB94B7600F0E66D /* Main.storyboard */; };
@@ -17,6 +18,7 @@
 
 /* Begin PBXFileReference section */
 		8B6B1B311DBFCC4A00501F54 /* FaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceView.swift; sourceTree = "<group>"; };
+		8B6B4FCE1DD23ABC0013CCE9 /* FaceExpression.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FaceExpression.swift; sourceTree = "<group>"; };
 		8B806DFE1DB94B7600F0E66D /* DrawFace.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DrawFace.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B806E011DB94B7600F0E66D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B806E031DB94B7600F0E66D /* FaceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceViewController.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 			children = (
 				8B6B1B301DBFCBCC00501F54 /* Supporting files */,
 				8B806E031DB94B7600F0E66D /* FaceViewController.swift */,
+				8B6B4FCE1DD23ABC0013CCE9 /* FaceExpression.swift */,
 				8B6B1B311DBFCC4A00501F54 /* FaceView.swift */,
 				8B806E051DB94B7600F0E66D /* Main.storyboard */,
 			);
@@ -149,6 +152,7 @@
 			files = (
 				8B806E041DB94B7600F0E66D /* FaceViewController.swift in Sources */,
 				8B806E021DB94B7600F0E66D /* AppDelegate.swift in Sources */,
+				8B6B4FCF1DD23ABC0013CCE9 /* FaceExpression.swift in Sources */,
 				8B6B1B321DBFCC4A00501F54 /* FaceView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

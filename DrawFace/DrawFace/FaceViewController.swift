@@ -9,19 +9,58 @@
 import UIKit
 
 class FaceViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        var redCircle = FaceView()
-        view.addSubview(redCircle)
+    var expression : FaceExpression = FaceExpression(eyes: .Close, mouth: .Smirk) {
+        didSet {
+            updateUI()
+        }
+    }
+    @IBAction func toggleEyes(sender: UITapGestureRecognizer) {
+        switch (expression.eyes) {
+        case .Open: expression.eyes = .Close
+        case .Close: expression.eyes = .Open
+        case .Squinting: break
+        }
+    }
+    @IBOutlet weak var faceView: FaceView! {
+        didSet {
+            faceView.addGestureRecognizer(UIPinchGestureRecognizer(target: faceView, action: "changeScale:"))
+            let happierGesture = UISwipeGestureRecognizer(target: self, action: "increaseHappiness:")
+            happierGesture.direction = .Down
+            faceView.addGestureRecognizer(happierGesture)
+            let sadGesture = UISwipeGestureRecognizer(target: self, action: "decreaseHappiness:")
+            sadGesture.direction = .Up
+            faceView.addGestureRecognizer(sadGesture)
+            
+            updateUI()
+        }
+    }
+    
+    @IBAction func faceViewTap(sender: UITapGestureRecognizer) {
+        
+        switch(expression.eyes) {
+        case .Open: expression.eyes = .Close
+        case .Close: expression.eyes = .Open
+        default: break
+        }
+        //updateUI()
+    }
+   
+    func increaseHappiness(recognizer: UISwipeGestureRecognizer) {
+        expression.mouth = expression.mouth.happierMouth()
+    }
+    func decreaseHappiness(recognizer: UISwipeGestureRecognizer) {
+        expression.mouth = expression.mouth.sadderMouth()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    func updateUI() {
+        switch(expression.eyes) {
+        case .Open: faceView.eyesOpen = true
+        case .Close: faceView.eyesOpen = false
+        case .Squinting: faceView.eyesOpen = false
+        }
+        faceView.mouthCurvature = -1 + Double(expression.mouth.rawValue) * 0.5
+        
     }
-
 
 }
 
